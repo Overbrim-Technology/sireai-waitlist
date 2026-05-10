@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SireAI - Waitlist</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-container": "#b1b7d6",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "on-tertiary-fixed-variant": "#474646",
+                    "secondary-container": "#424862",
+                    "primary-container": "#c5a059",
+                    "background": "#051424",
+                    "surface-container-lowest": "#010f1f",
+                    "inverse-primary": "#775a19",
+                    "surface-dim": "#051424",
+                    "tertiary-container": "#a7a5a5",
+                    "on-error": "#690005",
+                    "on-primary": "#412d00",
+                    "on-tertiary": "#313030",
+                    "surface-container-high": "#1c2b3c",
+                    "secondary": "#bfc5e4",
+                    "primary-fixed": "#ffdea5",
+                    "error": "#ffb4ab",
+                    "outline": "#9a8f80",
+                    "on-primary-container": "#4e3700",
+                    "surface-tint": "#e9c176",
+                    "surface-variant": "#273647",
+                    "surface-bright": "#2c3a4c",
+                    "on-secondary-fixed-variant": "#3f465f",
+                    "surface": "#051424",
+                    "surface-container": "#122131",
+                    "on-tertiary-container": "#3c3b3b",
+                    "on-secondary-fixed": "#141a32",
+                    "on-background": "#d4e4fa",
+                    "surface-container-low": "#0d1c2d",
+                    "on-error-container": "#ffdad6",
+                    "tertiary": "#c8c6c5",
+                    "on-surface-variant": "#d1c5b4",
+                    "outline-variant": "#4e4639",
+                    "on-secondary": "#292f48",
+                    "primary-fixed-dim": "#e9c176",
+                    "secondary-fixed": "#dce1ff",
+                    "primary": "#e9c176",
+                    "on-primary-fixed-variant": "#5d4201",
+                    "tertiary-fixed": "#e5e2e1",
+                    "on-surface": "#d4e4fa",
+                    "secondary-fixed-dim": "#bfc5e4",
+                    "surface-container-highest": "#273647",
+                    "inverse-surface": "#d4e4fa",
+                    "error-container": "#93000a",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "inverse-on-surface": "#233143",
+                    "on-primary-fixed": "#261900"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "stack-lg": "32px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "container-max": "1440px",
+                    "stack-md": "16px",
+                    "stack-sm": "8px",
+                    "section-gap": "80px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "display-lg": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-md": ["Inter"],
+                    "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .glass-panel {
+            background-color: rgba(10, 17, 40, 0.5); /* Derivation of deep surface for contrast */
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col relative selection:bg-primary-container selection:text-on-primary-container">
+<!-- Ambient Glow Background -->
+<div class="fixed inset-0 z-0 pointer-events-none flex justify-center items-center overflow-hidden">
+<div class="w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] opacity-60"></div>
+</div>
+<!-- TopNavBar -->
+<nav class="bg-background/70 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-primary/20 shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="SireAI Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ujyU21op1dvqxQSMfns68mACywhgYaG_1TTKWTuEAEyicjACR-WOPG4Cc8D_09FI2GAC-OO-ZUvAd4XF40HixNdSMdXTQxp5_SrblyLLlzXxTBfab0mCn4UeHaFQWZGNo6ae5xumugN_Sqho__Lqodehf1aWAZ1gtUaO4Pw8iEWHXN9H9Ij5deXaNU3xtrO8J8ospKvtwIHOGU-GIELInLZOHObbzAY3AqJtB5UcrVSnZABTUyI6qVYQQ0Im0HZFhAFI5jDLLcHsQ"/>
+<span class="font-display-lg text-headline-md font-bold text-primary hidden sm:block">SireAI</span>
+</div>
+<div class="flex items-center gap-8">
+<ul class="hidden md:flex items-center gap-6">
+<li>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:opacity-80 duration-300" href="https://t.me/Overbrimtech" target="_blank">Contact Admin</a>
+</li>
+</ul>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-label-sm text-label-sm uppercase hover:opacity-90 transition-all duration-300 hover:shadow-[0_0_15px_rgba(197,160,89,0.4)] hover:scale-95" href="#subscription-form">
+                    Join Waitlist
+                </button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow z-10 flex flex-col pt-24">
+<!-- Hero Section -->
+<section class="flex flex-col items-center justify-center text-center px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto w-full min-h-[60vh]">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-stack-md max-w-4xl tracking-tight drop-shadow-md">
+                Financial Command, Perfected by AI.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-2xl leading-relaxed">
+                SireAI is the ultimate finance reporting data analyst. Transform complex data into decisive executive insights instantly. Secure your spot at the forefront of financial intelligence.
+            </p>
+<div class="w-full max-w-xl mx-auto flex flex-col items-center gap-stack-sm">
+<form id="subscription-form" class="w-full flex flex-col sm:flex-row gap-4">
+<input name="email" class="flex-grow bg-surface-container border border-outline-variant/50 text-on-surface placeholder:text-on-surface-variant/50 rounded-lg px-4 py-3.5 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary shadow-inner font-body-md text-body-md transition-all duration-300" placeholder="Enter your executive email" required="" type="email"/>
+<button id="submit-btn" class="bg-primary-container text-on-primary-container px-8 py-3.5 rounded-lg font-body-md text-body-md font-semibold hover:opacity-90 transition-all duration-300 hover:shadow-[0_0_20px_rgba(197,160,89,0.5)] whitespace-nowrap" type="submit">
+                        Request Exclusive Access
+                    </button>
+</form>
+<p class="font-label-sm text-label-sm text-tertiary mt-2 tracking-widest opacity-80 uppercase">
+                    Join industry leaders already on the waitlist.
+                </p>
+</div>
+</section>
+<!-- Value Proposition Section -->
+<section class="px-margin-mobile md:px-margin-desktop pb-section-gap max-w-container-max mx-auto w-full">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="glass-panel border border-primary/20 rounded-xl p-stack-lg flex flex-col items-start transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] group relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors duration-500"></div>
+<span class="material-symbols-outlined text-primary text-4xl mb-stack-md drop-shadow-[0_0_8px_rgba(197,160,89,0.6)]" style="font-variation-settings: 'FILL' 1;">
+                        workspace_premium
+                    </span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">
+                        Executive Precision
+                    </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Board-ready financial reports generated in seconds, not days.
+                    </p>
+</div>
+<!-- Card 2 -->
+<div class="glass-panel border border-primary/20 rounded-xl p-stack-lg flex flex-col items-start transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] group relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors duration-500"></div>
+<span class="material-symbols-outlined text-primary text-4xl mb-stack-md drop-shadow-[0_0_8px_rgba(197,160,89,0.6)]" style="font-variation-settings: 'FILL' 1;">
+                        bolt
+                    </span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">
+                        Real-time Analytics
+                    </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Chat directly with your financial data to uncover hidden growth opportunities.
+                    </p>
+</div>
+<!-- Card 3 -->
+<div class="glass-panel border border-primary/20 rounded-xl p-stack-lg flex flex-col items-start transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] group relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors duration-500"></div>
+<span class="material-symbols-outlined text-primary text-4xl mb-stack-md drop-shadow-[0_0_8px_rgba(197,160,89,0.6)]" style="font-variation-settings: 'FILL' 1;">
+                        shield_lock
+                    </span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">
+                        Bank-grade Security
+                    </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Your enterprise data remains sovereign, encrypted, and isolated.
+                    </p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-stack-lg border-t border-primary/10 z-10 relative">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-stack-md">
+<span class="font-body-md text-body-md text-on-surface opacity-80 text-center md:text-left">
+                © 2026 SireAI. Elevating Executive Intelligence.
+            </span>
+<ul class="flex flex-wrap justify-center gap-6">
+<li>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Privacy Policy</a>
+</li>
+<li>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Terms of Service</a>
+</li>
+<li>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="mailto:overbrimhq@gmail.com">Contact</a>
+</li>
+</ul>
+</div>
+</footer>
+</body></html>
+
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyyiS1AMI-fZHd03HOpfshQt98gpu-hUA1Kfqxg827Ey9MS2wb1nblcvZaG8ModBxJNGg/exec';
+  const form = document.getElementById('subscription-form');
+  const btn = document.getElementById('submit-btn');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    
+    // 1. Loading State: Disable button and update text
+    btn.disabled = true;
+    btn.innerText = 'Processing...';
+    btn.style.opacity = '0.5';
+    btn.style.cursor = 'not-allowed';
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        alert('Success! You have been added to the list.');
+        form.reset();
+      })
+      .catch(error => {
+        console.error('Error!', error.message);
+        alert('Something went wrong. Please try again.');
+      })
+      .finally(() => {
+        // 2. Reset Button State
+        btn.disabled = false;
+        btn.innerText = 'Request Exclusive Access';
+        btn.style.opacity = '1';
+        btn.style.cursor = 'pointer';
+      });
+  });
+</script>
